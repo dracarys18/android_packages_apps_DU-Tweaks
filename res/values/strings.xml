@@ -393,4 +393,10 @@
     <string name="battery_light_full_color">Almost full battery</string>
     <string name="battery_light_reallyfull_color">Full battery (100)</string>
 
+    <!-- Double tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Status bar</string>
+    <string name="double_tap_to_sleep_summary">Double-tap status bar to put the device to sleep</string>
+     <!-- App Ops --> 
+    <string name="app_ops_title">Privacy Guard</string>
+    <string name="app_ops_summary">Application permissions control</string>
 </resources>
