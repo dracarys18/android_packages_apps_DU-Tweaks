@@ -358,6 +358,7 @@
     <string name="lockscreen_clock_selection_du">Analog (du)</string>
     <string name="lockscreen_clock_selection_sammy">Sammy</string>
     <string name="lockscreen_clock_selection_sammy_bold">Sammy (bold)</string>
+    <string name="lockscreen_clock_selection_text">Text (Android Q)</string>
 
     <!-- Active edge -->
     <string name="active_edge_short_actions_title">Short squeeze action</string>
