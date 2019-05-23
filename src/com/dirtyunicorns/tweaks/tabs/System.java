@@ -35,6 +35,8 @@ public class System extends SettingsPreferenceFragment
     private static final String LOCKSCREEN_ITEMS_CATEGORY = "lockscreen_items_category";
     private static final String MISC_CATEGORY = "miscellaneous_category";
     private static final String POWERMENU_CATEGORY = "powermenu_category";
+    private static final String ACTIVE_EDGE_CATEGORY = "active_edge_category";
+    private static final String RECENTS_CATEGORY = "recents_category";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,26 @@ public class System extends SettingsPreferenceFragment
         Preference PowerMenu = findPreference(POWERMENU_CATEGORY);
         if (!getResources().getBoolean(R.bool.has_powermenu)) {
             getPreferenceScreen().removePreference(PowerMenu);
+        }
+
+        Preference ActiveEdge = findPreference(ACTIVE_EDGE_CATEGORY);
+        if (!getResources().getBoolean(R.bool.has_active_edge)) {
+            getPreferenceScreen().removePreference(ActiveEdge);
+        } else {
+            if (!getContext().getPackageManager().hasSystemFeature(
+                    "android.hardware.sensor.assist")) {
+                getPreferenceScreen().removePreference(ActiveEdge);
+            }
+        }
+
+        Preference Recents = findPreference(RECENTS_CATEGORY);
+        if (!getResources().getBoolean(R.bool.has_recents)) {
+            getPreferenceScreen().removePreference(Recents);
+        } else {
+            if (!getContext().getPackageManager().hasSystemFeature(
+                    "com.android.launcher3")) {
+                getPreferenceScreen().removePreference(Recents);
+            }
         }
     }
 

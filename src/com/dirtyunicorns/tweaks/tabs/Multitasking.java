@@ -30,9 +30,7 @@ import com.android.internal.logging.nano.MetricsProto;
 public class Multitasking extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String ACTIVE_EDGE_CATEGORY = "active_edge_category";
     private static final String HEADS_UP_CATEGORY = "heads_up_category";
-    private static final String RECENTS_CATEGORY = "recents_category";
     private static final String TICKER_CATEGORY = "ticker_category";
 
     @Override
@@ -40,24 +38,9 @@ public class Multitasking extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.multitasking);
 
-        Preference ActiveEdge = findPreference(ACTIVE_EDGE_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_active_edge)) {
-            getPreferenceScreen().removePreference(ActiveEdge);
-        } else {
-            if (!getContext().getPackageManager().hasSystemFeature(
-                    "android.hardware.sensor.assist")) {
-                getPreferenceScreen().removePreference(ActiveEdge);
-            }
-        }
-
         Preference HeadsUp = findPreference(HEADS_UP_CATEGORY);
         if (!getResources().getBoolean(R.bool.has_heads_up)) {
             getPreferenceScreen().removePreference(HeadsUp);
-        }
-
-        Preference Recents = findPreference(RECENTS_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_recents)) {
-            getPreferenceScreen().removePreference(Recents);
         }
 
         Preference Ticker = findPreference(TICKER_CATEGORY);

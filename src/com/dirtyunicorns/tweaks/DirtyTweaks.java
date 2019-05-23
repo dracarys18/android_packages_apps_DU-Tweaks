@@ -39,7 +39,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.dirtyunicorns.tweaks.fragments.Team;
 import com.dirtyunicorns.tweaks.navigation.BottomNavigationViewCustom;
 //import com.dirtyunicorns.tweaks.tabs.Lockscreen;
-import com.dirtyunicorns.tweaks.tabs.Multitasking;
+//import com.dirtyunicorns.tweaks.tabs.Multitasking;
 import com.dirtyunicorns.tweaks.tabs.Navigation;
 import com.dirtyunicorns.tweaks.tabs.Statusbar;
 import com.dirtyunicorns.tweaks.tabs.System;
@@ -79,9 +79,9 @@ public class DirtyTweaks extends SettingsPreferenceFragment {
                     case R.id.navigation:
                         viewPager.setCurrentItem(2);
                         return true;
-                    case R.id.multitasking:
+                    /*case R.id.multitasking:
                         viewPager.setCurrentItem(3);
-                        return true;
+                        return true;*/
                 }
                 return false;
             }
@@ -124,7 +124,7 @@ public class DirtyTweaks extends SettingsPreferenceFragment {
             //frags[1] = new Lockscreen();
             frags[1] = new Statusbar();
             frags[2] = new Navigation();
-            frags[3] = new Multitasking();
+            //frags[3] = new Multitasking();
         }
 
         @Override
@@ -149,8 +149,8 @@ public class DirtyTweaks extends SettingsPreferenceFragment {
                 getString(R.string.bottom_nav_system_title),
                 //getString(R.string.bottom_nav_lockscreen_title),
                 getString(R.string.bottom_nav_statusbar_title),
-                getString(R.string.bottom_nav_navigation_title),
-                getString(R.string.bottom_nav_multitasking_title)};
+                getString(R.string.bottom_nav_navigation_title)};
+                //getString(R.string.bottom_nav_multitasking_title)};
 
         return titleString;
     }
