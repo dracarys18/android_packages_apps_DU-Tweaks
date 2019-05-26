@@ -372,4 +372,13 @@
     <string name="active_edge_app_select_summary">Select an app to launch with the squeeze action</string>
     <string name="active_edge_footer_info">Not all squeeze actions within Active Edge have the capability to activate the display.\n\nLong press on apps in the Select App menu to show and choose a specific activity.</string>
 
+    <!-- Battery light -->
+    <string name="battery_light_settings">Battery light options</string>
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">Almost full battery</string>
+    <string name="battery_light_reallyfull_color">Full battery (100)</string>
+
 </resources>
