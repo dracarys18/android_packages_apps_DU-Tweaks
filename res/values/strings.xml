@@ -62,6 +62,10 @@
     <string name="ticker_summary">Enable the statusbar ticker and configure ticker related tweaks</string>
     <string name="traffic_title">Traffic indicators</string>
     <string name="traffic_summary">Enable and configure the traffic indicators</string>
+    <!-- Data disabled icon -->
+    <string name="data_disabled_icon_title">Show data disabled icon</string>
+    <string name="data_disabled_icon_summary">Display the cross sign next to signal bar when data is disabled</string>
+
     <!-- Navigation -->
     <string name="buttons_title">Buttons</string>
     <string name="buttons_summary">Configure volume rocker options</string>
