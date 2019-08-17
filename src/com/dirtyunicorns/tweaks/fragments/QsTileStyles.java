@@ -94,6 +94,9 @@ public class QsTileStyles extends InstrumentedDialogFragment implements OnClickL
        
         LinearLayout neonlike = mView.findViewById(R.id.QsTileStyleNeonLike);
         setLayout("5", neonlike);
+        
+        LinearLayout oxygen = mView.findViewById(R.id.QsTileStyleOOS);
+        setLayout("6", oxygen);
     }
 
     @Override
@@ -143,6 +146,7 @@ public class QsTileStyles extends InstrumentedDialogFragment implements OnClickL
         LinearLayout squircle = mView.findViewById(R.id.QsTileStyleSquircle);
         LinearLayout teardrop = mView.findViewById(R.id.QsTileStyleTearDrop);
         LinearLayout neonlike = mView.findViewById(R.id.QsTileStyleNeonLike);
+        LinearLayout oxygen = mView.findViewById(R.id.QsTileStyleOOS);
 
         TypedValue typedValue = new TypedValue();
         res.getValue(R.dimen.qs_styles_layout_opacity, typedValue, true);
@@ -154,37 +158,50 @@ public class QsTileStyles extends InstrumentedDialogFragment implements OnClickL
             squircle.setAlpha(mLayoutOpacity);
             teardrop.setAlpha(mLayoutOpacity);
             neonlike.setAlpha(mLayoutOpacity);
+            oxygen.setAlpha(mLayoutOpacity);
         } else if (ThemeAccentUtils.isUsingQsTileStyles(mOverlayManager, mCurrentUserId, 2 )) {
             square.setAlpha(mLayoutOpacity);
             roundedsquare.setAlpha((float) 1.0);
             squircle.setAlpha(mLayoutOpacity);
             teardrop.setAlpha(mLayoutOpacity);
             neonlike.setAlpha(mLayoutOpacity);
+            oxygen.setAlpha(mLayoutOpacity);
         } else if (ThemeAccentUtils.isUsingQsTileStyles(mOverlayManager, mCurrentUserId, 3 )) {
             square.setAlpha(mLayoutOpacity);
             roundedsquare.setAlpha(mLayoutOpacity);
             squircle.setAlpha((float) 1.0);
             teardrop.setAlpha(mLayoutOpacity);
             neonlike.setAlpha(mLayoutOpacity);
+            oxygen.setAlpha(mLayoutOpacity);
         } else if (ThemeAccentUtils.isUsingQsTileStyles(mOverlayManager, mCurrentUserId, 4 )) {
             square.setAlpha(mLayoutOpacity);
             roundedsquare.setAlpha(mLayoutOpacity);
             squircle.setAlpha(mLayoutOpacity);
             teardrop.setAlpha((float) 1.0);
             neonlike.setAlpha(mLayoutOpacity);
+            oxygen.setAlpha(mLayoutOpacity);
         } else if (ThemeAccentUtils.isUsingQsTileStyles(mOverlayManager, mCurrentUserId, 5 )) {
             square.setAlpha(mLayoutOpacity);
             roundedsquare.setAlpha(mLayoutOpacity);
             squircle.setAlpha(mLayoutOpacity);
             teardrop.setAlpha(mLayoutOpacity);
             neonlike.setAlpha((float) 1.0);
-        }
+            oxygen.setAlpha(mLayoutOpacity);
+        }else if (ThemeAccentUtils.isUsingQsTileStyles(mOverlayManager, mCurrentUserId, 6 )) {
+            square.setAlpha(mLayoutOpacity);
+            roundedsquare.setAlpha(mLayoutOpacity);
+            squircle.setAlpha(mLayoutOpacity);
+            teardrop.setAlpha(mLayoutOpacity);
+            neonlike.setAlpha(mLayoutOpacity);
+            oxygen.setAlpha((float) 1.0);
+        } 
            else {
             square.setAlpha((float) 1.0);
             roundedsquare.setAlpha((float) 1.0);
             squircle.setAlpha((float) 1.0);
             teardrop.setAlpha((float) 1.0);
             neonlike.setAlpha((float) 1.0);
+            oxygen.setAlpha((float) 1.0);
         }
     }
 }
